@@ -1,0 +1,47 @@
+.navbar {
+	width: 50%;
+	justify-content: center;
+}
+
+.navbar ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.navbar ul > li {
+	margin-left: 40px;
+	font-size: 1.2rem;
+	color: #707070;
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar ul > li:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.nav-strip-container {
+	height: 2px;
+	width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.nav-strip {
+	background-color: #707070;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: -100%;
+}
+
+.navbar ul > li:first-child {
+	color: #a9b500;
+}
+
+.active {
+	color: #a9b500;
+}

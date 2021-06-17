@@ -1,0 +1,25 @@
+.homeMain {
+	position: relative;
+	font-family: 'Poor Richard';
+	min-height: 300vh;
+}
+.scroll-circle {
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(70%);
+	background-color: white;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+.scroll-circle-text {
+	position: fixed;
+	z-index: 4;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) translateY(-17px);
+	font-size: 2.5rem;
+}
