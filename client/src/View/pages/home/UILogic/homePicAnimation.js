@@ -43,5 +43,9 @@ export default function useHomePicAnimation(e, e2, e3) {
 			});
 		};
 		document.addEventListener('mousemove', animate);
+
+		return () => {
+			document.removeEventListener('mousemove', animate);
+		};
 	}, []);
 }

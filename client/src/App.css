@@ -19,7 +19,10 @@ li {
 	color: inherit;
 	list-style: none;
 }
-
+a {
+	text-decoration: none;
+	color: inherit;
+}
 .App {
 	text-align: center;
 	width: 100%;

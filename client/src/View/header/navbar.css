@@ -9,7 +9,7 @@
 	align-items: center;
 	justify-content: center;
 }
-.navbar ul > li {
+.navbar ul > a {
 	margin-left: 40px;
 	font-size: 1.2rem;
 	color: #707070;
@@ -17,7 +17,7 @@
 	flex-direction: column;
 }
 
-.navbar ul > li:hover {
+.navbar ul > a:hover {
 	opacity: 0.9;
 	cursor: pointer;
 }
@@ -38,8 +38,12 @@
 	left: -100%;
 }
 
-.navbar ul > li:first-child {
-	color: #a9b500;
+.nav-strip-active {
+	background-color: #a9b500;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
 }
 
 .active {

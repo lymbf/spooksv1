@@ -16,7 +16,7 @@ export default function useSection2Animation() {
 		let tl = new TimelineLite({
 			scrollTrigger: {
 				trigger: '.home-main',
-				start: 'bottom+=110% bottom',
+				start: 'bottom+=70% bottom',
 				toggleActions: 'play none none reverse'
 			}
 		});
@@ -50,7 +50,7 @@ export default function useSection2Animation() {
 		let tl = new TimelineLite({
 			scrollTrigger: {
 				trigger: '.home-main',
-				start: 'bottom+=150% bottom',
+				start: 'bottom+=70% bottom',
 				toggleActions: 'play none none reverse'
 			}
 		});

@@ -16,6 +16,9 @@ export default function useParallelAnimation() {
 		birds2,
 		rect
 	) => {
+		let moonY =
+			window.innerHeight - (mountains4.height.animVal.value + 60);
+
 		let tlStars = new TimelineLite({ repeat: -1 });
 		tlStars
 			.to(stars, {
@@ -29,7 +32,7 @@ export default function useParallelAnimation() {
 
 		let settings = {
 			scrollTrigger: {
-				trigger: '.home-main',
+				trigger: '.background',
 				markers: true,
 				start: 'top top',
 				end: '+=500',
@@ -50,7 +53,7 @@ export default function useParallelAnimation() {
 		let rectTl = new TimelineLite(settings);
 
 		mountains1Tl.to(mountains1, { y: -190 });
-		mooonTl.to(moon, { y: 150 });
+		mooonTl.to(moon, { y: moonY - 100 });
 		frontTreesTl.to(frontTrees, { y: -100 });
 		mountains2Tl.to(mountains2, { y: -140 });
 		backTreesTl.to(backTrees, { y: -90 });

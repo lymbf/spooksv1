@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 
 export default function Mountains4({ setMountains4 }) {
 	let mountains4Ref = useRef();
+	console.log(mountains4Ref);
 	useEffect(() => {
 		setMountains4(mountains4Ref.current);
 	}, []);

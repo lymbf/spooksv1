@@ -21,7 +21,7 @@ export default function useHomeScrollAnimation() {
 		gsap.to(pic, {
 			scrollTrigger: {
 				trigger: '.home-main',
-				start: 'center+=550 center',
+				start: 'center+=250 center',
 				toggleActions: 'play none none reverse'
 			},
 			duration: 0.5,
@@ -42,7 +42,7 @@ export default function useHomeScrollAnimation() {
 		gsap.to(pic, {
 			scrollTrigger: {
 				trigger: '.home-main',
-				start: 'center+=550 center',
+				start: 'center+=250 center',
 				toggleActions: 'play none none reverse'
 			},
 			duration: 0.5,
