@@ -20,21 +20,21 @@ export default function Mountain2({ setMountains2 }) {
 					y2="449.95"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#1f2021" />
+					<stop offset="0" stopColor="#1f2021" />
 					<stop
 						offset="0.32"
-						stop-color="#2c2f30"
-						stop-opacity="0.91"
+						stopColor="#2c2f30"
+						stopOpacity="0.91"
 					/>
 					<stop
 						offset="0.74"
-						stop-color="#52585a"
-						stop-opacity="0.64"
+						stopColor="#52585a"
+						stopOpacity="0.64"
 					/>
 					<stop
 						offset="0.79"
-						stop-color="#585e60"
-						stop-opacity="0.6"
+						stopColor="#585e60"
+						stopOpacity="0.6"
 					/>
 				</linearGradient>
 			</defs>

@@ -1,0 +1,27 @@
+.entry-form {
+	width: 400px;
+	height: 600px;
+	background-color: rgba(0, 0, 0, 0.795);
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.entry-form form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.entry-form form label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+.entry-form form input {
+	margin-top: 1rem;
+}

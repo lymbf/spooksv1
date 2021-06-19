@@ -16,41 +16,41 @@ export default function Moon({ setMoon }) {
 					gradientTransform="translate(32.96 9.37) scale(1.04 1.03)"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0.49" stop-color="#d5d5d5" />
+					<stop offset="0.49" stopColor="#d5d5d5" />
 					<stop
 						offset="0.56"
-						stop-color="#d4d7ca"
-						stop-opacity="0.78"
+						stopColor="#d4d7ca"
+						stopOpacity="0.78"
 					/>
 					<stop
 						offset="0.64"
-						stop-color="#d3dabf"
-						stop-opacity="0.54"
+						stopColor="#d3dabf"
+						stopOpacity="0.54"
 					/>
 					<stop
 						offset="0.72"
-						stop-color="#d2dcb5"
-						stop-opacity="0.35"
+						stopColor="#d2dcb5"
+						stopOpacity="0.35"
 					/>
 					<stop
 						offset="0.79"
-						stop-color="#d1deae"
-						stop-opacity="0.2"
+						stopColor="#d1deae"
+						stopOpacity="0.2"
 					/>
 					<stop
 						offset="0.87"
-						stop-color="#d0dfa8"
-						stop-opacity="0.09"
+						stopColor="#d0dfa8"
+						stopOpacity="0.09"
 					/>
 					<stop
 						offset="0.94"
-						stop-color="#d0e0a5"
-						stop-opacity="0.02"
+						stopColor="#d0e0a5"
+						stopOpacity="0.02"
 					/>
 					<stop
 						offset="1"
-						stop-color="#d0e0a4"
-						stop-opacity="0"
+						stopColor="#d0e0a4"
+						stopOpacity="0"
 					/>
 				</radialGradient>
 			</defs>

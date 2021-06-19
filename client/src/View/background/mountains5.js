@@ -20,10 +20,10 @@ export default function Mountains5({ setMountains5 }) {
 					y2="450.97"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#0b0b0b" />
-					<stop offset="0.14" stop-color="#191919" />
-					<stop offset="0.41" stop-color="#3c3c3c" />
-					<stop offset="0.43" stop-color="#3e3e3e" />
+					<stop offset="0" stopColor="#0b0b0b" />
+					<stop offset="0.14" stopColor="#191919" />
+					<stop offset="0.41" stopColor="#3c3c3c" />
+					<stop offset="0.43" stopColor="#3e3e3e" />
 				</linearGradient>
 			</defs>
 			<g id="Layer_2" data-name="Layer 2">

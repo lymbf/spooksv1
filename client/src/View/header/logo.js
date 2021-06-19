@@ -19,41 +19,41 @@ export default function Logo() {
 						gradientTransform="translate(0)"
 						gradientUnits="objectBoundingBox"
 					>
-						<stop offset="0.489" stop-color="#d5d5d5" />
+						<stop offset="0.489" stopColor="#d5d5d5" />
 						<stop
 							offset="0.555"
-							stop-color="#d3d7ca"
-							stop-opacity="0.78"
+							stopColor="#d3d7ca"
+							stopOpacity="0.78"
 						/>
 						<stop
 							offset="0.637"
-							stop-color="#d2dabe"
-							stop-opacity="0.545"
+							stopColor="#d2dabe"
+							stopOpacity="0.545"
 						/>
 						<stop
 							offset="0.717"
-							stop-color="#d1dcb5"
-							stop-opacity="0.349"
+							stopColor="#d1dcb5"
+							stopOpacity="0.349"
 						/>
 						<stop
 							offset="0.795"
-							stop-color="#d0ddad"
-							stop-opacity="0.196"
+							stopColor="#d0ddad"
+							stopOpacity="0.196"
 						/>
 						<stop
 							offset="0.869"
-							stop-color="#d0dfa8"
-							stop-opacity="0.086"
+							stopColor="#d0dfa8"
+							stopOpacity="0.086"
 						/>
 						<stop
 							offset="0.939"
-							stop-color="#d0dfa5"
-							stop-opacity="0.024"
+							stopColor="#d0dfa5"
+							stopOpacity="0.024"
 						/>
 						<stop
 							offset="1"
-							stop-color="#d0e0a4"
-							stop-opacity="0"
+							stopColor="#d0e0a4"
+							stopOpacity="0"
 						/>
 					</radialGradient>
 					<filter
@@ -69,7 +69,7 @@ export default function Logo() {
 							stdDeviation="3"
 							result="blur"
 						/>
-						<feFlood flood-opacity="0.161" />
+						<feFlood floodOpacity="0.161" />
 						<feComposite operator="in" in2="blur" />
 						<feComposite in="SourceGraphic" />
 					</filter>
@@ -326,8 +326,8 @@ export default function Logo() {
 							data-name="Spooks"
 							transform="translate(54.43 16)"
 							fill="#a9b500"
-							font-size="40"
-							font-family="Ravie"
+							fontSize="40"
+							fontFamily="Ravie"
 						>
 							<tspan x="0" y="42">
 								Sp

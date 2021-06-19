@@ -1,5 +1,4 @@
-import React from 'react';
-import { gsap, TimelineLite } from 'gsap';
+import { TimelineLite } from 'gsap';
 
 export default function useParallelAnimation() {
 	let animate = (
@@ -33,7 +32,6 @@ export default function useParallelAnimation() {
 		let settings = {
 			scrollTrigger: {
 				trigger: '.background',
-				markers: true,
 				start: 'top top',
 				end: '+=500',
 				toggleActions: 'play none none reverse',
@@ -47,7 +45,6 @@ export default function useParallelAnimation() {
 		let mountains3Tl = new TimelineLite(settings);
 		let mountains4Tl = new TimelineLite(settings);
 		let mountains5Tl = new TimelineLite(settings);
-		let birds1Tl = new TimelineLite(settings);
 		let birds2Tl = new TimelineLite(settings);
 		let mooonTl = new TimelineLite(settings);
 		let rectTl = new TimelineLite(settings);

@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from 'react';
 
 export default function Mountains4({ setMountains4 }) {
 	let mountains4Ref = useRef();
-	console.log(mountains4Ref);
 	useEffect(() => {
 		setMountains4(mountains4Ref.current);
 	}, []);
@@ -21,9 +20,9 @@ export default function Mountains4({ setMountains4 }) {
 					y2="399.46"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop offset="0" stop-color="#0b0b0b" />
-					<stop offset="0.38" stop-color="#1c1c1c" />
-					<stop offset="0.98" stop-color="#333" />
+					<stop offset="0" stopColor="#0b0b0b" />
+					<stop offset="0.38" stopColor="#1c1c1c" />
+					<stop offset="0.98" stopColor="#333" />
 				</linearGradient>
 			</defs>
 			<g id="Layer_2" data-name="Layer 2">

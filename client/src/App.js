@@ -5,6 +5,7 @@ import Background from './View/background/background';
 import Header from './View/header/header';
 import HomeMain from './View/pages/home/homeMain';
 import Play from './View/pages/play/play';
+import Game from './View/game/game';
 
 function App() {
 	return (
@@ -12,13 +13,20 @@ function App() {
 			<Background />
 
 			<Router>
-				<Header />
 				<Switch>
-					<Route path="/play">
-						<Play />
+					<Route path="/game">
+						<Game />
 					</Route>
 					<Route path="/">
-						<HomeMain />
+						<Header />
+						<Switch>
+							<Route path="/play">
+								<Play />
+							</Route>
+							<Route path="/">
+								<HomeMain />
+							</Route>
+						</Switch>
 					</Route>
 				</Switch>
 			</Router>
