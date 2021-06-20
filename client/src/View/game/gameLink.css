@@ -1,0 +1,23 @@
+.game-link {
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-link > div {
+	padding: 0.2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	min-height: 40px;
+	background-color: rgb(48, 48, 48);
+	display: flex;
+	align-items: center;
+}
+.game-link > div:first-child {
+	color: #a9b500;
+}
+.game-link > div:last-child {
+	font-family: 'Poor Richard';
+}
