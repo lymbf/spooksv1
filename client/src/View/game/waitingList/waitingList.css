@@ -1,0 +1,36 @@
+.waiting-list-container {
+	height: 10vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.637);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.waiting-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.waiting-list > div {
+	margin-right: 0.7rem;
+}
+.waiting-list > div:first-child {
+	color: #a9b500;
+}
+
+.join-team {
+	background-color: #a9b500;
+	color: black;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	padding: 0.3rem;
+	padding-right: 0.7rem;
+	padding-left: 0.7rem;
+	border-radius: 10px;
+}
+
+.join-team:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}

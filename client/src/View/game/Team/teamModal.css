@@ -1,5 +1,60 @@
 .team-modal {
 	height: 100%;
-	background-color: grey;
+	background-color: rgba(0, 0, 0, 0.637);
 	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.team-modal > div {
+	width: 100%;
+}
+
+.team-modal > div > div {
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.team-modal > div > div > div {
+	margin-bottom: 0.5rem;
+}
+.team-modal > div > div > div:first-child {
+	font-size: 1.4rem;
+	color: #a9b500;
+}
+.team-modal > div > div > div:last-child {
+	font-size: 1.1rem;
+	color: grey;
+}
+
+.team-modal > div:last-child {
+	font-size: 1.4rem;
+}
+
+.red-team {
+	color: rgb(131, 51, 40);
+}
+
+.blue-team {
+	color: rgb(16, 78, 129);
+}
+
+.captain-button {
+	background-color: #a9b500;
+	color: black;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	padding: 0.3rem;
+	padding-right: 0.7rem;
+	padding-left: 0.7rem;
+	border-radius: 10px;
+	font-size: 0.8rem;
+}
+
+.captain-button:hover {
+	opacity: 0.8;
+	cursor: pointer;
 }

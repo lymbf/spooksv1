@@ -1,0 +1,23 @@
+.join-form {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: white;
+	z-index: 30;
+}
+
+.join-form > form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.join-form label {
+	margin: 2rem;
+}
+
+.join-form input {
+	margin-left: 0.5rem;
+}

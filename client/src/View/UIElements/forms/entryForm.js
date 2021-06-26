@@ -7,12 +7,15 @@ import useEntryFormController from './UILogic/entryFormController';
 export default function EntryForm() {
 	const [validNick, setValidNick] = useState(false);
 
-	let { handleSubmit } = useEntryFormController();
+	let { handleSubmit, setNick } = useEntryFormController();
 
 	return (
 		<div className="entry-form">
 			<form>
-				<NickInput setValidNick={setValidNick} />
+				<NickInput
+					setValidNick={setValidNick}
+					setNick={setNick}
+				/>
 				<button onClick={handleSubmit} disabled={!validNick}>
 					Start Game
 				</button>

@@ -3,9 +3,10 @@ import './nickInput.css';
 
 import useEntryFormController from './UILogic/nickInputController';
 
-export default function NickInput({ setValidNick }) {
+export default function NickInput({ setValidNick, setNick }) {
 	let { error, blur, setBlur, handleInputChange } = useEntryFormController(
-		setValidNick
+		setValidNick,
+		setNick
 	);
 
 	return (

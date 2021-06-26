@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import './game.css';
 
-import GameLink from './gameLink';
-import TeamModal from './Team/teamModal';
-import Board from './board/board';
+// >>> UI Imports <<<<
+
+import GameMain from './gameMain';
+import JoinForm from './forms/joinForm';
 
 export default function Game() {
-	return (
-		<div className="game">
-			<GameLink />
-			<div className="game-container">
-				<TeamModal />
-				<Board />
-				<TeamModal />
-			</div>
-		</div>
-	);
+	let user = useSelector(state => state.user.name);
+
+	return user ? <GameMain /> : <JoinForm />;
 }
