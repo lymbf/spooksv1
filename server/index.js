@@ -23,7 +23,7 @@ let server = app.listen('5000', () => {
 });
 
 // >>>>> IO SERVER <<<<<
-let { joinRoom } = require('./events/roomEvents');
+let { joinRoom, handleDisconnect } = require('./events/roomEvents');
 
 const ioServer = io(server, {
 	cors: {
@@ -34,7 +34,16 @@ const ioServer = io(server, {
 
 ioServer.on('connect', socket => {
 	console.log('user connected to socket: ' + socket.id);
+
 	let room = socket.handshake.query.room;
 	let user = socket.handshake.query.user;
+
 	joinRoom(socket, user, room, app);
+
+	socket.on('disconnect', ()=>{
+		handleDisconnect(user, room, app);
+		
+		console.log(user + ' has left');
+		console.log(app.locals.rooms);
+	})
 });

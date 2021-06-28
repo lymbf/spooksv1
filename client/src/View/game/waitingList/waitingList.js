@@ -1,7 +1,10 @@
 import React from 'react';
 import './waitingList.css';
+import {useSelector} from 'react-redux';
 
 export default function WaitingList({ handleJoinTeam }) {
+
+	let playerPool = useSelector(state=>state.players)
 	return (
 		<div className="waiting-list-container">
 			<div
@@ -14,14 +17,12 @@ export default function WaitingList({ handleJoinTeam }) {
 			</div>
 			<div className="waiting-list">
 				<div>Waiting list:</div>
-				<div>Jacek,</div>
-				<div>Adam,</div>
-				<div>Pawel</div>
-				<div>Jacek,</div>
-				<div>Adam,</div>
-				<div>Pawel</div>
-				<div>Jacek,</div>
-				<div>Adam,</div>
+				{playerPool.map(player=>{
+					console.log('cipencjuszeczka');
+					if(!player.team){
+						return <div key = {player.name}>{player.name}</div>
+					}
+				})}
 			</div>
 			<div
 				className="join-team"

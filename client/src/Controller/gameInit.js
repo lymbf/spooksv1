@@ -6,6 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { setGameRoom } from './redux/reducers/game';
 
+// >>> Events/Listeners imports <<<
+
+import {addRoomListeners} from './listeners/gameRoomListeners';
+
 export default function useGameInit() {
 	let dispatch = useDispatch();
 	let user = useSelector(state => state.user);
@@ -25,6 +29,9 @@ export default function useGameInit() {
 				user: user.name
 			}
 		});
+
+		addRoomListeners(socket, dispatch);
+		
 
 		console.log('game started');
 	}, []);
