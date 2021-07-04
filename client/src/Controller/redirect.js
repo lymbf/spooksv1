@@ -28,7 +28,9 @@ let useRedirect = () => {
 		};
 		let gameStr = await getRoom();
 		console.log(gameStr);
+
 		// > redirect to url/game/<room_number>
+
 		history.push(`/game?id=${gameStr}`);
 	};
 	return { generateGameRoom };

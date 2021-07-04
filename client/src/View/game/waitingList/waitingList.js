@@ -1,37 +1,47 @@
 import React from 'react';
 import './waitingList.css';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
-export default function WaitingList({ handleJoinTeam }) {
+import useGameRoomEvents from '../../../Controller/events/gameRoomEvents';
 
-	let playerPool = useSelector(state=>state.players)
+export default function WaitingList() {
+	let playerPool = useSelector(state => state.players);
+	let user = useSelector(state => state.user);
+
+	let { joinTeam } = useGameRoomEvents();
+
 	return (
 		<div className="waiting-list-container">
-			<div
-				className="join-team"
-				onClick={() => {
-					handleJoinTeam(1);
-				}}
-			>
-				Join Team 1
-			</div>
+			{!user.team &&
+				<div
+					className="join-team"
+					onClick={() => {
+						joinTeam(1);
+					}}
+				>
+					Join Team 1
+				</div>}
 			<div className="waiting-list">
 				<div>Waiting list:</div>
-				{playerPool.map(player=>{
-					console.log('cipencjuszeczka');
-					if(!player.team){
-						return <div key = {player.name}>{player.name}</div>
+				{playerPool.map(player => {
+					if (!player.team) {
+						return (
+							<div key={player.name}>
+								{player.name}
+							</div>
+						);
 					}
 				})}
 			</div>
-			<div
-				className="join-team"
-				onClick={() => {
-					handleJoinTeam(2);
-				}}
-			>
-				Join Team 2
-			</div>
+			{!user.team &&
+				<div
+					className="join-team"
+					onClick={() => {
+						joinTeam(2);
+					}}
+				>
+					Join Team 2
+				</div>}
 		</div>
 	);
 }

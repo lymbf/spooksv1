@@ -4,11 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // >>> Redux imports <<<<
 
-import { setGameRoom } from './redux/reducers/game';
+import { setGameRoom, setCaptain_1, setCaptain_2 } from './redux/reducers/game';
+import { addPlayer } from './redux/reducers/players';
+import { setSocket } from './redux/reducers/socket';
+import { setUserId } from './redux/reducers/user';
 
 // >>> Events/Listeners imports <<<
 
-import {addRoomListeners} from './listeners/gameRoomListeners';
+import useAddRoomListeners from './listeners/gameRoomListeners';
 
 export default function useGameInit() {
 	let dispatch = useDispatch();
@@ -23,6 +26,7 @@ export default function useGameInit() {
 		dispatch(setGameRoom(room));
 
 		// >>> init socket connection / join room  <<<
+
 		const socket = io('http://localhost:5000/', {
 			query: {
 				room: room,
@@ -30,9 +34,53 @@ export default function useGameInit() {
 			}
 		});
 
-		addRoomListeners(socket, dispatch);
-		
+		socket.on('connect', () => {
+			dispatch(setUserId(socket.id));
+		});
+		dispatch(setSocket(socket));
+
+		// >>>> get initial game state <<<<<
+
+		socket.on('init_state', payload => {
+			console.log('heres payload:');
+			console.log(payload);
+			if (payload) {
+				payload.users.forEach(user => {
+					dispatch(
+						addPlayer({
+							name: user.name,
+							id: user.id,
+							team: user.team,
+							captain: user.captain
+						})
+					);
+					if (user.captain) {
+						if (user.team === 1) {
+							dispatch(
+								setCaptain_1({
+									id: user.id,
+									name: user.name
+								})
+							);
+						} else {
+							dispatch(
+								setCaptain_2({
+									id: user.id,
+									name: user.name
+								})
+							);
+						}
+					}
+				});
+			} else {
+				console.log('error');
+			}
+		});
+
+		//>>>>> Connect Listeners <<<<<
 
 		console.log('game started');
 	}, []);
+
+	useAddRoomListeners();
 }

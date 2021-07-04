@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import useRedirect from '../../../../Controller/redirect.js';
 import { setUser } from '../../../../Controller/redux/reducers/user';
-import {addPlayer} from '../../../../Controller/redux/reducers/players';
 
 export default function useEntryFormController() {
 	const [nick, setNick] = useState(false);
@@ -14,7 +13,6 @@ export default function useEntryFormController() {
 		e.preventDefault();
 		console.log(nick);
 		dispatch(setUser(nick));
-		dispatch(addPlayer(nick));
 		generateGameRoom();
 	};
 
