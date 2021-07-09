@@ -1,0 +1,31 @@
+.starting-form {
+	height: 100%;
+	width: 400px;
+	background-color: rgb(65, 65, 65);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.starting-form > form > button {
+	height: 2rem;
+	border-radius: 15px;
+	border: none;
+	background-color: #a9b500;
+	font-family: inherit;
+	padding: 0.7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.212);
+}
+
+.starting-form > form > button:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.starting-form > form > button:disabled:hover {
+	cursor: default;
+	opacity: 1;
+}

@@ -3,7 +3,7 @@ let SET_CAPTAIN_1 = 'game/setCaptain1';
 let SET_CAPTAIN_2 = 'game/setCaptain2';
 let REMOVE_CAPTAIN = 'game/removeCaptain';
 
-let game = (state = { gameRoom: false }, action) => {
+let game = (state = { gameRoom: false, score: [0, 0] }, action) => {
 	switch (action.type) {
 		case SET_GAME_ROOM:
 			return { ...state, gameRoom: action.payload };

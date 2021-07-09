@@ -1,0 +1,26 @@
+.pic-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vW;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.24);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pic-view:hover {
+	cursor: pointer;
+}
+
+#pic-view {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 40;
+}
+
+#root {
+	z-index: 1;
+}

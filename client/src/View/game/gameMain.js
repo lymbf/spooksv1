@@ -7,7 +7,7 @@ import GameLink from './gameLink';
 import TeamModal from './Team/teamModal';
 import Board from './board/board';
 import WaitingList from './waitingList/waitingList';
-import StartingForm from './startingForm/startingForm';
+import StartingForm from './forms/startingForm/startingForm';
 
 // >>>> gameController / INIT <<<<
 

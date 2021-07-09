@@ -9,7 +9,9 @@ export default function TeamModal({ header, teamClass, id }) {
 	let user = useSelector(state => state.user);
 	let captain_1 = useSelector(state => state.game.captain_1);
 	let captain_2 = useSelector(state => state.game.captain_2);
+	let score = useSelector(state => state.game.score);
 	let captain = id === 1 ? captain_1 : captain_2;
+	score = id === 1 ? score[0] : score[1];
 
 	let { becomeCaptain } = useGameRoomEvents();
 
@@ -56,7 +58,9 @@ export default function TeamModal({ header, teamClass, id }) {
 			</div>
 			<div>
 				<div>Score:</div>
-				<div>3</div>
+				<div>
+					{score}
+				</div>
 			</div>
 		</div>
 	);

@@ -26,6 +26,7 @@ let server = app.listen('5000', () => {
 let { handleDisconnect } = require('./events/roomEvents');
 let { handleInitConnection } = require('./initConnection');
 let initRoomListeners = require('./listeners/roomListeners');
+let initSessionListeners = require('./listeners/sessionListeners');
 
 const ioServer = io(server, {
 	cors: {
@@ -50,4 +51,5 @@ ioServer.on('connect', socket => {
 	});
 
 	initRoomListeners(socket, app, room);
+	initSessionListeners(socket, app, room);
 });

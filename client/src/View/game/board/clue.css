@@ -1,0 +1,12 @@
+.clue {
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.clue > div {
+	padding: 1rem;
+	color: black;
+	font-size: 1.2rem;
+}

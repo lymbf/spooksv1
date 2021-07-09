@@ -11,6 +11,8 @@ import {
 	removeCaptain
 } from '../redux/reducers/game';
 
+import { setSession, setBoard } from '../redux/reducers/session';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -96,6 +98,17 @@ let useAddRoomListeners = () => {
 								name: player.name
 							})
 						);
+					}
+				});
+
+				// >>>>> handling session start <<<<<<<
+				socket.on('session_started', payload => {
+					if (payload && payload.board) {
+						console.log(payload);
+						dispatch(
+							setBoard({ board: payload.board })
+						);
+						dispatch(setSession());
 					}
 				});
 			}

@@ -37,4 +37,11 @@ module.exports = (socket, app, room) => {
 		socket.to(room).emit('captain_set', { id: payload });
 		socket.emit('captain_set', { id: payload });
 	});
+
+	socket.on('start_session', () => {
+		let i = findRoomIndex(room);
+		app.locals.rooms[i].session = { session: true };
+		socket.to(room).emit('session_started');
+		socket.emit('session_started');
+	});
 };
